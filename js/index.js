@@ -25,13 +25,14 @@ var PATTERNS = {
 
 if(localStorage.getItem(PRODUCT_KEY) == null){
     var users = [];
+    showView(signInview);
 }else{
     var users = JSON.parse(localStorage.getItem(PRODUCT_KEY));
     if(localStorage.getItem("currentUser") == null){
         var currentUser;
         showView(signInview);
     } else{
-        var currentUser = JSON.parse(localStorage.getItem("currentUser"))
+        var currentUser = JSON.parse(localStorage.getItem("currentUser"));
         welcomeMessageElement && (welcomeMessageElement.textContent = "Welcome " + currentUser.name);
         showView(home);
     }
