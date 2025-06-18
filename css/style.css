@@ -1,0 +1,124 @@
+/* *********************** global  *********************** */
+:root{
+}
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clear-fix{
+    clear: both;
+}
+img{ display: block;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a, span {
+    display: inline-block;
+}
+ul{
+    list-style: none;
+}
+/* *********************** global  *********************** */
+.bg-color{
+    /* background-color: #24353F; */
+    /* background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
+    background: linear-gradient(to bottom, #2c3e50, #3498db);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: -1;
+}
+.bg-color-1{
+    background-color: rgba(0, 0, 0, 0.2);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 5;
+}
+.max-width-500{
+    max-width: 500px;
+}
+.shadow-custom{
+    box-shadow: rgba(0, 0, 0, 1) -5px 2px 54px -9px;
+}
+.title{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    color: #17a2b8;
+    font-family: sans-serif;
+}
+.title-1{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+    font-family: sans-serif;
+}
+.title-1:hover{
+    color: white;
+    text-decoration: none;
+}
+.logout-btn{
+    color: rgb(174, 183, 190);
+    font-family: sans-serif;
+}
+.logout-btn{
+    color: rgb(174, 183, 190);
+}
+.header{
+    height: 50px;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+input{
+    color: white !important;
+}
+label {
+  color: white !important; /* A nice blue color for the placeholder */
+    opacity: 0.7 !important;
+}
+
+.alert-message, .email-alert-message, .password-alert-message, .name-alert-message{
+    font-size: 12px;
+    line-height: 12px;
+}
+.navbar-toggler{
+    color: white !important;
+}
+.text-align-right{
+    text-align: right;
+}
+.alertify-notifier{
+    color: white;
+}
+ /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+} 

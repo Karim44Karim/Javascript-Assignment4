@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/alertify.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>SignUp</title>
+    </head>
+    <body class="bg-color blur min-vh-100 d-flex flex-column">
+        <div id="signUpView" class="container mt-5 text-white">
+            <div class="w-75 max-width-500 m-auto mt-5 p-5 shadow-custom bg-color-1 rounded-4">
+                <h1 class="text-center title pb-3">Smart Login System</h1>
+                <div>
+                    <div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control mb-3 bg-transparent" id="userName" name="userName" type="text" placeholder="Enter your name">
+                            <label for="userName">Enter your name</label>
+                        </div>
+                        <p class="text-danger name-alert-message"></p>
+                        <div class="form-floating mb-3">
+                            <input class="form-control mb-3 bg-transparent" id="email" name="email" type="text" placeholder="Enter your email">
+                            <label for="email">Enter your email</label>
+                        </div>
+                        <p class="text-danger email-alert-message"></p>
+                        <div class="form-floating mb-3">
+                            <input class="form-control mb-3 bg-transparent" id="password" name="password" type="password" placeholder="Enter password">
+                            <label for="password">Enter your password</label>
+                        </div>
+                        <p class="text-danger password-alert-message"></p>
+                        <p class="text-center text-success alert-message"></p>
+                    </div>
+                    <button class="w-100 btn btn-outline-info" id="signUpBtn">SignUp</button>
+                    <p class="text-center mt-3">You have an account? <a href="#" onclick="showView(signInView)">Sign in</a></p>
+                </div>
+            </div>
+        </div>
+        <div id="signInView" class="container mt-5 text-white">
+            <div class="w-75 max-width-500 m-auto mt-5 p-5 shadow-custom bg-color-1 rounded-4">
+                <h1 class="text-center title pb-3">Smart Login System</h1>
+                <div>
+                    <div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control mb-3 bg-transparent" id="email-login" name="email-login" type="text" placeholder="name@example.com">
+                            <label for="email-login">Enter your email</label>
+                        </div>
+                        <p class="text-danger email-alert-message"></p>
+                        <div class="form-floating mb-3">
+                            <input class="form-control mb-3 bg-transparent" id="password-login" name="password-login" type="password" placeholder="Enter password">
+                            <label for="password-login">Enter your password</label>
+                        </div>
+                        <p class="text-danger password-alert-message"></p>
+                        <p class="text-center text-success alert-message"></p>
+                    </div>
+                    <button class="w-100 btn btn-outline-info" id="signInBtn">Signin</button>
+                    <p class="text-center mt-3">You have an account? <a href="#" onclick="showView(signUpView)">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+        <div id="homeView" class="min-vh-100">
+            <nav class="navbar navbar-expand-lg shadow-custom position-fixed container-fluid" data-bs-theme="dark">
+                <div class="container-fluid w-75">
+                    <a class="navbar-brand title-1" href="./home.html">SMART LOGIN</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="ms-lg-auto d-flex justify-content-end" role="search">
+                            <button id="signOutBtn" class="btn btn-outline-warning logout-btn" type="submit">Logout</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="container text-white d-flex justify-content-center align-items-center flex-grow-1 min-vh-100">
+                <div class="w-75 max-width-500 p-5 shadow-custom bg-color-1 rounded-4">
+                    <h2 id="welcomeMessageElement" class="text-center title"></h2>
+                </div>
+            </div>
+        </div>
+        <script src="./js/alertify.min.js"></script>
+        <script src="https://kit.fontawesome.com/a27af16f9b.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>  
+        <script src="./js/index.js"></script>
+    </body>
+</html>
