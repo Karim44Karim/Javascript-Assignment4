@@ -21,6 +21,7 @@ var home = document.getElementById("homeView");
 var views = [home, signUpview, signInview];
 var currentView;
 
+var showPassword = false;
 
 // define patterns and product key
 var PRODUCT_KEY = "users";
@@ -151,7 +152,7 @@ function signUp(){
 
     var newUser = {
         name: userNameIn.value,
-        email: emailIn.value,
+        email: emailIn.value.toLowerCase(),
         password: passwordIn.value,
         id: userIdMax,
     }
@@ -213,7 +214,7 @@ function signOut(){
 
 function checkNewEmail(userEmail){
     for(var i=0; i<users.length; i++){
-        if(userEmail.value == users[i].email){
+        if(userEmail.value.toLowerCase() == users[i].email){
             userEmail.classList.add("is-invalid");
             userEmail.classList.remove("is-valid");
             showEmailAlertMessage("Email already registered!");
@@ -228,7 +229,7 @@ function checkNewEmail(userEmail){
 }
 function checkRegisteredEmail(userEmail){
     for(var i=0; i<users.length; i++){
-        if(userEmail.value == users[i].email){
+        if(userEmail.value.toLowerCase() == users[i].email){
             userEmail.classList.add("is-valid");
             userEmail.classList.remove("is-invalid");
             showEmailAlertMessage("");
@@ -301,6 +302,28 @@ function showEmailAlertMessage(message){
 function showPasswordAlertMessage(message){
     var passwordAlertMessage = document.querySelector("#"+currentView.id+" .password-alert-message");
     passwordAlertMessage.innerText = message;
+}
+
+function togglePasswordView(){
+    var showHideIcon = document.querySelector("#"+currentView.id+" .showHidePassword i");
+    var showHidespan = document.querySelector("#"+currentView.id+" .showHidePassword span");
+    var passwordField = document.querySelector("#"+currentView.id+" .password");
+
+    showPassword = !showPassword;
+
+    if(showPassword){
+        showHideIcon.classList.add("bi-eye-slash-fill");
+        showHideIcon.classList.remove("bi-eye-fill");
+        showHidespan.textContent = "Hide";
+        passwordField.type = "text";
+    } else{
+        showHideIcon.classList.remove("bi-eye-slash-fill");
+        showHideIcon.classList.add("bi-eye-fill");
+        showHidespan.textContent = "Show";
+        passwordField.type = "password";
+    }
+
+
 }
 
 

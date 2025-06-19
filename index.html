@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="./css/alertify.min.css">
         <link rel="stylesheet" href="./css/style.css">
         <title>Smart Login System</title>
@@ -25,8 +26,12 @@
                         </div>
                         <p class="text-danger email-alert-message"></p>
                         <div class="form-floating mb-3">
-                            <input class="form-control mb-3 bg-transparent" id="password" name="password" type="password" placeholder="Enter password">
+                            <input class="form-control mb-3 bg-transparent password" id="password" name="password" type="password" placeholder="Enter password">
                             <label for="password">Enter your password</label>
+                        </div>
+                        <div class="showHidePassword" onclick="togglePasswordView()">
+                            <i class="bi bi-eye-fill"></i>
+                            <span>show</span> passowrd
                         </div>
                         <p class="text-danger password-alert-message"></p>
                         <p class="text-center text-success alert-message"></p>
@@ -47,8 +52,12 @@
                         </div>
                         <p class="text-danger email-alert-message"></p>
                         <div class="form-floating mb-3">
-                            <input class="form-control mb-3 bg-transparent" id="password-login" name="password-login" type="password" placeholder="Enter password">
+                            <input class="form-control mb-3 bg-transparent password" id="password-login" name="password-login" type="password" placeholder="Enter password">
                             <label for="password-login">Enter your password</label>
+                        </div>
+                        <div class="showHidePassword" onclick="togglePasswordView()">
+                            <i class="bi bi-eye-fill"></i>
+                            <span>show</span> passowrd
                         </div>
                         <p class="text-danger password-alert-message"></p>
                         <p class="text-center text-success alert-message"></p>
