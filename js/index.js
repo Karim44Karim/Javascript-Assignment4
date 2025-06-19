@@ -1,12 +1,19 @@
+//define sign up inputs
 var userNameIn = document.getElementById("userName");
 var emailIn = document.getElementById("email");
 var passwordIn = document.getElementById("password");
 var signUpBtn = document.getElementById("signUpBtn");
+
+//define login inputs
 var emailLogIn = document.getElementById("email-login");
 var passwordLogIn = document.getElementById("password-login");
 var signInBtn = document.getElementById("signInBtn");
 var signOutBtn = document.getElementById("signOutBtn");
+
+//define last user id. serial id is used for simplicity.
 var userIdMax;
+
+//define views
 var welcomeMessageElement = document.getElementById("welcomeMessageElement");
 var signUpview = document.getElementById("signUpView");
 var signInview = document.getElementById("signInView");
@@ -15,6 +22,7 @@ var views = [home, signUpview, signInview];
 var currentView;
 
 
+// define patterns and product key
 var PRODUCT_KEY = "users";
 var PATTERNS = {
     userName: /^[a-zA-Z][a-zA-Z0-9_]{2,15}$/,
@@ -48,6 +56,7 @@ function showView(view){
             views[i].style.display = "none";
         }
     }
+    clearInputs();
 }
 
 
@@ -99,16 +108,25 @@ passwordLogIn?.addEventListener("input", function(){
 
 
 function clearInputs(){
+    //clear inputs
     userNameIn && (userNameIn.value = "");
     emailIn && (emailIn.value = "");
     emailLogIn && (emailLogIn.value = "");
     passwordIn && (passwordIn.value = "");
     passwordLogIn && (passwordLogIn.value = "");
+
+    //clear input fields style
     userNameIn && (userNameIn.classList.remove("is-valid","is-invalid"));
     emailIn && (emailIn.classList.remove("is-valid","is-invalid"));
     emailLogIn && (emailLogIn.classList.remove("is-valid","is-invalid"));
     passwordIn && (passwordIn.classList.remove("is-valid","is-invalid"));
     passwordLogIn && (passwordLogIn.classList.remove("is-valid","is-invalid"));
+
+    //clear alert messages
+    var allAlertMessages = document.querySelectorAll("#"+currentView.id+" p.text-danger");
+    for(var i = 0; i<allAlertMessages.length; i++){
+        allAlertMessages[i].textContent = "";
+    }
 }
 
 function validateInput(key, inputElement){
